@@ -5,11 +5,13 @@
 **Python version:** `Python 3.6.8`
 ```
 
-## Python decencies
+## Python dependencies
 
 You can install all the dependencies with
 ```bash
 $ pip3 install -r requirements.txt
+```
+  ### To install dependencies: https://pipenv-fork.readthedocs.io/en/latest/basics.html
 ```
 Be carefull to have `CMake` installed before trying to install `face_recognition`. You can install it with
 ```bash
