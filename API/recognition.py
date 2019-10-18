@@ -38,10 +38,12 @@ known_face_encodings = []
 known_face_names = []
 known_faces_filenames = []
 
+# copy known faces
 for (dirpath, dirnames, filenames) in os.walk('assets/img/users/'):
     known_faces_filenames.extend(filenames)
     break
 
+# encode new faces with facial rec
 for filename in known_faces_filenames:
     face = face_recognition.load_image_file('assets/img/users/' + filename)
     known_face_names.append(re.sub("[0-9]",'', filename[:-4]))
@@ -103,7 +105,9 @@ while True:
                 json_to_export['picture_array'] = frame.tolist()
 
                 # * ---------- SEND data to API --------- *
-
+                # Posting to server running the API
+                # Remember to change this to reflect actual server in production
+                # secured with JWT
 
                 r = requests.post(url='http://127.0.0.1:5000/receive_data', json=json_to_export)
                 print("Status: ", r.status_code)
