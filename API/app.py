@@ -15,7 +15,19 @@ FILE_PATH = os.path.dirname(os.path.realpath(__file__))
 app = Flask(__name__)
 CORS(app, support_credentials=True)
 
+# * ---------- DATABASE CONFIG --------- *
+DATABASE_USER = os.environ['DATABASE_USER']
+DATABASE_PASSWORD = os.environ['DATABASE_PASSWORD']
+DATABASE_HOST = os.environ['DATABASE_HOST']
+DATABASE_PORT = os.environ['DATABASE_PORT']
+DATABASE_NAME = os.environ['DATABASE_NAME']
 
+def DATABASE_CONNECTION():
+    return psycopg2.connect(user=DATABASE_USER,
+                              password=DATABASE_PASSWORD,
+                              host=DATABASE_HOST,
+                              port=DATABASE_PORT,
+                              database=DATABASE_NAME)
 
 
 
