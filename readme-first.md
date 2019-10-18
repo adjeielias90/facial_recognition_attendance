@@ -2,7 +2,7 @@
 
 ## Description
 
-**Late Checker** is a web app with a deep learning AI to automate attendance recording.
+**Facial Attendace** is a web app with a deep learning AI to automate attendance recording.
 It will detect every face that comes in the range of the camera and compare it with the all the already known faces
 in the system. The system automatically updates the arrival or departure time in the database.
 At the end you get for every day and every employee a *record* with:
