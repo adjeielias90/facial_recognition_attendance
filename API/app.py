@@ -15,6 +15,8 @@ FILE_PATH = os.path.dirname(os.path.realpath(__file__))
 app = Flask(__name__)
 CORS(app, support_credentials=True)
 
+
+# Edit this config to reflect your postgres database settings
 # * ---------- DATABASE CONFIG --------- *
 DATABASE_USER = os.environ['DATABASE_USER']
 DATABASE_PASSWORD = os.environ['DATABASE_PASSWORD']
