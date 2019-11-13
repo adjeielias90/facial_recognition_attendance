@@ -46,6 +46,6 @@ The front-end will display all the data and allow you to seek for individual dat
 
 
 ## More details
-* [Back-end details](API/README.md)
-* [Front-end details](frontend/face-attendance/README.md)
+* [Back-end details](API/readme.md)
+* [Front-end details](frontend/face-attendance/readme.md)
 
